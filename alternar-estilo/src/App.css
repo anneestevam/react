@@ -1,0 +1,12 @@
+.bg-vermelho {
+  background-color: red;
+}
+
+.bg-azul {
+  background-color: blue;
+}
+
+.container {
+  width: 100px;
+  height: 100px;
+}
