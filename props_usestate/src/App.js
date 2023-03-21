@@ -2,6 +2,8 @@ import "./App.css";
 import { useState } from "react";
 import imagemCachorro from "./assets/cachorro.jpg";
 import imagemGato from "./assets/gato.jpg";
+import CardAnimal from "./componentes/CardAnimal";
+import CardInformacoes from "./componentes/CardInformacoes";
 
 export default function App() {
   let imagemAnimal = "";
@@ -37,16 +39,8 @@ export default function App() {
         <button onClick={alterarState}>Mudar Animal</button>
       </header>
 
-      {/* Compomente CardAnimal */}
-      <div id="CardAnimal">
-        <img src={imagemAnimal} alt="animal" />
-      </div>
-
-      {/* Componente CardInformacoes */}
-      <div className="CardInformacao">
-        <h3>Informação sobre o {tipoAnimal}</h3>
-        <p>{informacaoAnimal}</p>
-      </div>
+      <CardAnimal imagemAnimal={imagemAnimal} />
+      <CardInformacoes tipoAnimal={tipoAnimal} informacaoAnimal={informacaoAnimal} />
     </div>
   );
 }
